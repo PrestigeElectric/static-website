@@ -1,0 +1,36 @@
+html,
+body {
+  height: 100%; /* Ensure that the html and body elements take up the full height */
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex; /* Use flexbox to layout children (header, section, footer) */
+  flex-direction: column; /* Stack children vertically */
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  background: #f4f4f4; /* Example background color, change as needed */
+}
+
+header,
+.about,
+footer {
+  max-width: 960px;
+  width: 100%; /* Ensures that these elements are full width within their containers */
+  margin: auto;
+  padding: 20px;
+  background: #fff; /* Example background color, change as needed */
+}
+
+.main-content {
+  flex: 1; /* Allows the main content to expand and fill available space, pushing the footer down */
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  font-size: 0.8em;
+  text-align: center;
+  color: #666; /* Medium grey text, change as needed */
+}
