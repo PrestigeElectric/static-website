@@ -1,36 +1,59 @@
-html,
-body {
-  height: 100%; /* Ensure that the html and body elements take up the full height */
-  margin: 0;
+:root {
+  --background-color-1: white;
+  --background-color-2: lightgray;
+  --text-color: black;
+  --link-color: blue;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color-1: #2b2b2b;
+    --background-color-2: #202020;
+    --text-color: white;
+    --link-color: blue;
+  }
+}
+
+* {
+  box-sizing: border-box;
   padding: 0;
+  margin: 0;
 }
 
 body {
-  display: flex; /* Use flexbox to layout children (header, section, footer) */
-  flex-direction: column; /* Stack children vertically */
-  font-family: "Arial", sans-serif;
-  line-height: 1.6;
-  background: #f4f4f4; /* Example background color, change as needed */
+  font-family: sans-serif;
 }
-
-header,
-.about,
-footer {
-  max-width: 960px;
-  width: 100%; /* Ensures that these elements are full width within their containers */
-  margin: auto;
-  padding: 20px;
-  background: #fff; /* Example background color, change as needed */
-}
-
-.main-content {
-  flex: 1; /* Allows the main content to expand and fill available space, pushing the footer down */
+body .page-container {
   display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+body .page-container .content-wrap {
+  flex: 1;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   flex-direction: column;
 }
 
+section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.screen-margins {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
 footer {
-  font-size: 0.8em;
-  text-align: center;
-  color: #666; /* Medium grey text, change as needed */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
 }
